@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('ambassadors', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique();
+            $table->string('name');
+            $table->string('username');
+            $table->string('facebook_url')->unique();
+            $table->string('twitter_url')->unique();
+            $table->string('youtube_url')->unique();
+            $table->string('image');
             $table->timestamps();
         });
     }
